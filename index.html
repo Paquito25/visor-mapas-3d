@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Gas Maps Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.152.2/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <div id="top-panel">
+        <div class="control-block">
+            <label for="areaSelect">Area</label>
+            <select id="areaSelect">
+                <option value="bordos">Bordos</option>
+                <option value="prados">Prados</option>
+            </select>
+        </div>
+
+        <div class="control-block">
+            <label for="gasSelect">Gas</label>
+            <select id="gasSelect">
+                <option value="CH4">CH4</option>
+                <option value="CO">CO</option>
+                <option value="NO2">NO2</option>
+                <option value="O3">O3</option>
+                <option value="SO2">SO2</option>
+            </select>
+        </div>
+
+        <div id="panel-title">3D Gas Maps</div>
+    </div>
+
+    <div id="viewer"></div>
+
+    <div id="bottom-toolbar">
+        <button id="resetBtn">Reset View</button>
+        <button id="isoBtn">Isometric View</button>
+        <button id="topBtn">Top View</button>
+        <button id="frontBtn">Front View</button>
+        <button id="saveBtn">Download Image</button>
+    </div>
+
+    <div id="legend-container">
+        <img id="legendImage" src="" alt="Legend">
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
