@@ -22,7 +22,7 @@ body {
     background: #111214;
 }
 
-/* Panel superior claro */
+/* ===== Panel superior ===== */
 #top-panel {
     position: absolute;
     top: 18px;
@@ -78,7 +78,7 @@ body {
     border-color: rgba(0, 0, 0, 0.22);
 }
 
-/* Barra inferior horizontal */
+/* ===== Barra inferior ===== */
 #bottom-toolbar {
     position: absolute;
     left: 50%;
@@ -119,13 +119,13 @@ body {
     border-color: rgba(0, 0, 0, 0.18);
 }
 
-/* Leyenda */
+/* ===== Leyenda ===== */
 #legend-container {
     position: absolute;
     right: 24px;
     bottom: 92px;
-    width: 230px;
-    padding: 14px;
+    width: 220px;
+    padding: 12px;
     background: rgba(245, 245, 247, 0.95);
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 16px;
@@ -140,7 +140,7 @@ body {
 
 #legendImage {
     max-width: 100%;
-    max-height: 360px;
+    max-height: 340px;
     display: block;
     object-fit: contain;
     background: #ffffff;
@@ -149,7 +149,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Tablet */
+/* ===== Tablet ===== */
 @media (max-width: 1100px) {
     #top-panel {
         flex-wrap: wrap;
@@ -172,8 +172,8 @@ body {
     }
 }
 
-/* Móvil */
-@media (max-width: 760px) {
+/* ===== Móvil ===== */
+@media (max-width: 768px) {
     #top-panel {
         top: 10px;
         left: 10px;
@@ -186,7 +186,7 @@ body {
 
     #panel-title {
         width: 100%;
-        font-size: 16px;
+        font-size: 15px;
         margin: 0;
         padding: 0;
         order: -1;
@@ -214,43 +214,46 @@ body {
         bottom: 10px;
         transform: none;
         max-width: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 8px;
         padding: 10px;
         border-radius: 14px;
     }
 
     #bottom-toolbar button {
-        flex: 1 1 calc(50% - 8px);
         min-width: 0;
-        height: 40px;
-        font-size: 13px;
-        padding: 8px 10px;
+        width: 100%;
+        height: 38px;
+        font-size: 12px;
+        padding: 6px 8px;
+        border-radius: 10px;
     }
 
     #legend-container {
         right: 10px;
-        bottom: 128px;
-        width: 150px;
+        bottom: 108px;
+        width: 132px;
         padding: 8px;
         border-radius: 14px;
     }
 
     #legendImage {
-        max-height: 220px;
+        max-height: 180px;
         padding: 6px;
         border-radius: 8px;
     }
 }
 
-/* Móvil pequeño */
-@media (max-width: 520px) {
+/* ===== Móvil pequeño ===== */
+@media (max-width: 480px) {
     #top-panel {
-        gap: 6px;
         padding: 8px 10px;
+        gap: 6px;
     }
 
     #panel-title {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .control-block label {
@@ -260,28 +263,26 @@ body {
     .control-block select {
         height: 36px;
         font-size: 12px;
+        padding: 5px 8px;
     }
 
     #bottom-toolbar {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 6px;
         padding: 8px;
     }
 
     #bottom-toolbar button {
-        width: 100%;
-        height: 38px;
-        font-size: 12px;
-        padding: 6px 8px;
+        height: 36px;
+        font-size: 11px;
+        padding: 5px 6px;
     }
 
     #legend-container {
-        width: 130px;
-        bottom: 104px;
+        width: 122px;
+        bottom: 98px;
     }
 
     #legendImage {
-        max-height: 180px;
+        max-height: 165px;
     }
 }
